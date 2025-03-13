@@ -1,0 +1,76 @@
+/* -----------------------------------------
+	Datepicker CSS
+----------------------------------------- */
+.daterangepicker {
+    padding: 10px;
+    background-color: var(--bg-white);
+    border-width: 0;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .2);
+
+    .available.next,
+    .available.prev {
+        border-radius: 50%;
+        background: var(--bg-2);
+
+        span {
+            border-color: var(--color-primary);
+        }
+    }
+
+    .btn-primary {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+
+        &:hover{
+            color: var(--text-white);
+        }
+    }
+}
+.daterangepicker .calendar-table{
+    background-color: var(--bg-white);
+}
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+    cursor: pointer;
+    border-radius: 50%;
+    min-width: 32px;
+    min-height: 31px;
+    line-height: 31px;
+}
+
+.daterangepicker td.start-date.end-date {
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+    background: var(--color-primary) !important;
+    border-color: transparent;
+}
+
+.daterangepicker select.hourselect,
+.daterangepicker select.minuteselect,
+.daterangepicker select.secondselect,
+.daterangepicker select.ampmselect {
+    height: auto;
+    color: var(--base-color);
+}
+
+.daterangepicker td.available:hover, 
+.daterangepicker th.available:hover,
+.daterangepicker td.off, 
+.daterangepicker td.off.in-range, 
+.daterangepicker td.off.start-date, 
+.daterangepicker td.off.end-date{
+    background-color: var(--bg-2);
+}
+
+.daterangepicker .drp-buttons{
+    border-color: var(--border-color);
+}
+
+.daterangepicker .drp-buttons .btn-default{
+    color: var(--text-dark);
+}

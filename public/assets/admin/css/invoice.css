@@ -1,0 +1,9 @@
+/* invoice css */
+
+.table-invoice-style-1 th,
+.table-invoice-style-1 td{
+  padding: 10px 20px;
+}
+.table-invoice-style-1 th {
+  font-weight: 500;
+}

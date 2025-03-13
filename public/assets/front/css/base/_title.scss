@@ -1,0 +1,178 @@
+/* -----------------------------------------
+    Title CSS
+----------------------------------------- */
+.section-title{
+
+    .title{
+        margin-bottom: 0;
+        position: relative;
+        margin-top: -8px;
+
+        @media #{$sm} {
+            margin-top: -5px;
+        }
+
+        span{
+            position: relative;
+        }
+    }
+
+    .subtitle {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .subtitle_v2{
+        padding: 7px 16px;
+        width: fit-content;
+        background-color: var(--color-primary);
+        background-image: var(--gradient-1);
+        color: var(--text-white);
+		clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    }
+
+    .subtitle_v3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        .line {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            border-inline-start: 6px solid var(--color-primary);
+            width: 26px;
+            height: 18px;
+            transform: skewX(-10deg);
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 6px;
+                height: 100%;
+                margin-inline-start: 4px;
+                background-color: var(--color-primary);
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 6px;
+                height: 100%;
+                margin-inline-start: auto;
+                margin-inline-end: 0;
+                background-color: var(--color-primary);
+            }
+        }
+    }
+
+    &.title-inline{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media #{$md-up} {
+            > div {
+                flex: 0 0 auto;
+                max-width: calc(50% - 10px);
+            }
+        }
+    }
+
+    &.title-center{
+        text-align: center;
+        .title{
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .title-shape {
+                margin-inline-start: 0;
+            }
+        }
+
+        .subtitle_v2{
+            margin-inline: auto;
+        }
+
+        p{
+            max-width: 500px;
+            margin-inline: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.content-title {
+
+    .title{
+        position: relative;
+        margin-bottom: 10px;
+        margin-top: -8px;
+
+        @media #{$sm} {
+            margin-top: -5px;
+        }
+    }
+
+    .subtitle {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .subtitle_v2{
+        padding: 7px 16px;
+        width: fit-content;
+        background-color: var(--color-primary);
+        background-image: var(--gradient-1);
+        color: var(--text-white);
+		clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    }
+
+    .subtitle_v3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        .line {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            border-inline-start: 6px solid var(--color-primary);
+            width: 26px;
+            height: 18px;
+            transform: skewX(-10deg);
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 6px;
+                height: 100%;
+                margin-inline-start: 4px;
+                background-color: var(--color-primary);
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 6px;
+                height: 100%;
+                margin-inline-start: auto;
+                margin-inline-end: 0;
+                background-color: var(--color-primary);
+            }
+        }
+    }
+
+    p:last-child{
+        margin-bottom: 0;
+    }
+}

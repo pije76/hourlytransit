@@ -1,0 +1,46 @@
+/* -----------------------------------------
+    Gallery CSS
+----------------------------------------- */
+.gallery-area{
+    position: relative;
+    overflow: hidden;
+
+    .card{
+        &_img{
+            position: relative;
+            overflow: hidden;
+            img{
+                @include transition(transform, .3s, ease-out);
+            }
+        }
+        &:hover{
+            .card_img {
+                img {
+                    transform: scale3d(1.05, 1.05, 1.05);
+                }
+            }
+        }
+    }
+}
+
+.gallery-area_v1 {
+    .card{
+        overflow: hidden;
+        &_img{
+            border-radius: inherit;
+        }
+        &_content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            z-index: 3;
+            border-radius: inherit;
+            background: linear-gradient(180deg, rgba(var(--color-black-rgb), 0.00) 33.00%, var(--color-black) 86%);
+        }
+    }
+}

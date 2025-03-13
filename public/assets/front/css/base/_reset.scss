@@ -1,0 +1,115 @@
+/* -----------------------------------------
+    Reset CSS
+----------------------------------------- */
+:focus {
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.form-control {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+ul{
+    padding: 0;
+}
+
+figure,
+blockquote,
+ul {
+    margin-bottom: 0;
+}
+
+table, th, td{
+    vertical-align: middle;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: rgba($color: var(--color-dark-rgb), $alpha: .2);
+}
+
+/* Tooltip CSS */
+.tooltip {
+    --bs-tooltip-bg: var(--color-primary);
+    --bs-tooltip-padding-x: 10px;
+    --bs-tooltip-padding-y: 5px;
+    --bs-tooltip-font-size: var(--font-xsm)
+}
+
+/* Badge CSS */
+.badge {
+    font-size: var(--font-xsm);
+    font-weight: var(--font-medium);
+
+    &.size-md {
+        padding: 8px 12px;
+    }
+
+    &.bg-success {
+        color: var(--color-green);
+        background: rgba($color: var(--color-green-rgb), $alpha: .12) !important;
+    }
+
+    &.bg-info {
+        color: var(--color-blue);
+        background: rgba($color: var(--color-blue-rgb), $alpha: .12) !important;
+    }
+
+    &.bg-danger {
+        color: var(--color-red);
+        background: rgba($color: var(--color-red-rgb), $alpha: .12) !important;
+    }
+
+    &.bg-warning {
+        color: var(--color-yellow);
+        background: rgba($color: var(--color-yellow), $alpha: .2) !important;
+    }
+}
+
+/* Card CSS */
+.card {
+    --bs-card-bg: var(--bg-white);
+    --bs-body-color: var(--text-medium);
+    border: none;
+    border-radius: 0;
+    transition: all .3s;
+
+    .card_title {
+        margin-bottom: 20px;
+    }
+
+    .card_text {
+        color: var(--text-medium);
+    }
+
+    &.hover-shadow {
+        &:hover {
+            border-color: transparent !important;
+            box-shadow: var(--shadow-md);
+        }
+    }
+}
+
+/* Dropdown CSS */
+.dropdown {
+    .dropdown-menu {
+        --bs-dropdown-font-size: var(--font-base);
+        --bs-dropdown-color: var(--text-dark);
+        --bs-dropdown-border-color: var(--border-color);
+        --bs-dropdown-box-shadow: var(--shadow-md);
+        --bs-dropdown-link-hover-color: var(--color-primary);
+        --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+        --bs-dropdown-link-active-color: var(--text-white);
+        --bs-dropdown-link-active-bg: var(--color-primary);
+    }
+}

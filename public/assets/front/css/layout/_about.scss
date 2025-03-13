@@ -1,0 +1,108 @@
+/* -----------------------------------------
+    About CSS
+----------------------------------------- */
+.about-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-area_v1 {
+    .card {
+        flex-direction: initial;
+        gap: 20px;
+        z-index: 1;
+        background-color: transparent;
+
+        &_icon {
+            flex: 0 0 auto;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-md);
+
+            img {
+                max-width: 45px;
+            }
+        }
+
+        &_content {
+            position: relative;
+            padding-inline-start: 15px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 25px;
+                height: 100%;
+                margin-inline-start: 0;
+                margin-inline-end: auto;
+                border-radius: var(--radius-sm);
+                background-color: rgba($color: var(--color-primary-rgb), $alpha: .15);
+            }
+        }
+    }
+}
+
+.about-area_v2 {
+    .card {
+        
+        &_top{
+            display: flex;
+            gap: 20px;
+            z-index: 1;
+        }
+        &_icon {
+            flex: 0 0 auto;
+            position: relative;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-primary);
+            margin-top: -30px;
+
+            img {
+                max-width: 45px;
+            }
+        }
+    }
+}
+
+.about-area_v3 {
+    .card {
+        flex-direction: initial;
+        align-items: center;
+        gap: 20px;
+        z-index: 1;
+        background-color: transparent;
+
+        &_icon {
+            flex: 0 0 auto;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-md);
+
+            img {
+                max-width: 45px;
+            }
+        }
+
+        &_content {
+            position: relative;
+        }
+    }
+}

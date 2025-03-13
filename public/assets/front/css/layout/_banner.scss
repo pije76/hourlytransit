@@ -1,0 +1,50 @@
+/* -----------------------------------------
+    Banner CSS
+----------------------------------------- */
+.banner-img {
+    position: relative;
+    .video-btn {
+        z-index: 5;
+    }
+}
+
+.newsletter-area{
+    .shapes{
+        position: absolute;
+        top: 50%;
+        height: calc(100% + 60px);
+        transform: translateY(-50%);
+        width: fit-content;
+        display: flex;
+        gap: 20px;
+        z-index: 4;
+
+        span{
+            flex: 0 0 auto;
+            width: 60px;
+            height: 100%;
+            background-color: rgba($color: var(--color-white-rgb), $alpha: .2);
+        }
+
+        &.shapes-1{
+            left: 0;
+            span{
+                transform: rotateZ(10deg);
+            }
+        }
+        &.shapes-2{
+            right: 0;
+            span{
+                transform: rotateZ(-10deg);
+            }
+        }
+    }
+
+    &.newsletter-area_v2 {
+        .overlay{
+            opacity: 1;
+            background-color: rgba($color: var(--color-primary-rgb), $alpha: .5);
+            background: linear-gradient(90deg, rgba(var(--color-primary-rgb), 0.95) 19.06%, rgba(var(--color-dark-rgb), 0.00) 72.26%);
+        }
+    }
+}

@@ -1,0 +1,67 @@
+/* -----------------------------------------
+    Category CSS
+----------------------------------------- */
+.category-area{
+    position: relative;
+    overflow: hidden;
+
+    .card{
+        &_img{
+            position: relative;
+            overflow: hidden;
+            img{
+                @include transition(transform, .3s, ease-out);
+            }
+        }
+        &:hover{
+            .card_img {
+                img {
+                    transform: scale3d(1.05, 1.05, 1.05);
+                }
+            }
+        }
+    }
+}
+
+.category-area_v1 {
+    .card{
+        &_content{
+            margin-top: -20px;
+            padding-inline-start: 25px;
+        }
+    }
+}
+.category-area_v2 {
+    .card{
+        overflow: hidden;
+        &_img{
+            border-radius: inherit;
+        }
+        &_content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: center;
+            z-index: 3;
+            border-radius: inherit;
+            background: linear-gradient(180deg, rgba(var(--color-black-rgb), 0.00) 33.00%, var(--color-black) 86%);
+
+            .btn-icon{
+                transform: translateY(100px);
+                color: var(--color-primary);
+            }
+        }
+
+        &:hover{
+            .btn-icon{
+                transform: translateY(-10px);
+            }
+        }
+    }
+}

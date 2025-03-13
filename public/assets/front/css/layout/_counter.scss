@@ -1,0 +1,145 @@
+/* -----------------------------------------
+    Counter CSS
+----------------------------------------- */
+.counter-area {
+    position: relative;
+    .card {
+        position: relative;
+        z-index: 1;
+        background-color: transparent;
+        &_icon {
+            width: 50px;
+            height: 50px;
+            margin-inline: auto;
+            @include make-flex(center, center);
+            color: var(--text-white);
+            font-size: 46px;
+            z-index: 1;
+
+            img {
+                max-width: 40px;
+            }
+        }
+    }
+    
+    .counter-inner{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.counter-area_v1{
+    .card{
+        background-color: var(--bg-white);
+        &_icon {
+            flex: 0 0 auto;
+            position: relative;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-pill);
+            background-color: rgba($color: var(--color-primary-rgb), $alpha: .15);
+
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+
+    .item{
+        @media (max-width: 575.98px) {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        &:nth-child(even) {
+            margin-top: 30px;
+        }
+    }
+
+    .video-btn-parent{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.counter-area_v2{
+    .counter-inner {
+        padding: 200px 0 200px;
+
+        .left-span,
+        .right-span{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    .counter-blocks{
+        margin-top: -50px;
+    }
+
+    .card{
+        background-color: var(--bg-white);
+
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 65px;
+            height: 100%;
+            margin-inline: auto;
+            background: linear-gradient(180deg, rgba(var(--color-primary-rgb), .2) 0%, rgba(var(--color-white-rgb), 0.00) 100%);
+        }
+        &_icon {
+            flex: 0 0 auto;
+            position: relative;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-pill);
+            background-color: var(--bg-white);
+
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+
+    .shapes{
+        position: absolute;
+        top: 50%;
+        height: calc(100% + 60px);
+        transform: translateY(-50%);
+        width: fit-content;
+        display: flex;
+        gap: 20px;
+        z-index: 4;
+
+        span{
+            flex: 0 0 auto;
+            width: 60px;
+            height: 100%;
+            background-color: rgba($color: var(--color-white-rgb), $alpha: .2);
+        }
+
+        &.shapes-1{
+            left: 0;
+            span{
+                transform: rotateZ(10deg);
+            }
+        }
+        &.shapes-2{
+            right: 0;
+            span{
+                transform: rotateZ(-10deg);
+            }
+        }
+    }
+}

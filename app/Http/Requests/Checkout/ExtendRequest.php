@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Http\Requests\Checkout;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class ExtendRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, mixed>
+     */
+    public function rules(): array
+    {
+        return [
+            'price' => 'required',
+            'package_id' => 'required',
+            'start_date' => 'required',
+            'expire_date' => 'required',
+            'payment_method' => $this->price != 0 ? 'required' : '',
+            'cardNumber' => 'sometimes|required',
+            'month' => 'sometimes|required',
+            'year' => 'sometimes|required',
+            'cardCVC' => 'sometimes|required',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'receipt.required' => 'The receipt field image is required when instruction required receipt image'
+        ];
+    }
+}

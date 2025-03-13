@@ -1,0 +1,144 @@
+/* -----------------------------------------
+    Variables CSS
+----------------------------------------- */
+:root {
+  --font-heading: "Marcellus", serif;
+  --font-body: "Jost", sans-serif;
+  --font-icon: "Font Awesome 5 Pro";
+  --font-base: 16px;
+  --font-sm: 14px;
+  --font-xsm: 12px;
+  --font-lg: 18px;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-size--h1: 64px;
+  --font-size--h2: 48px;
+  --font-size--h3: 32px;
+  --font-size--h4: 24px;
+  --font-size--h5: 20px;
+  --font-size--h6: 18px;
+  --color-primary: #C6834B;
+  --color-secondary: #C6834B;
+  --color-red: #EB4C4C;
+  --color-yellow: #e59819;
+  --color-green: #00B67A;
+  --color-blue: #0d6efd;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark: #121212;
+  --color-light: #b8b5b5;
+  --color-medium: #666666;
+  --color-primary-rgb: 198, 131, 75;
+  --color-secondary-rgb: 198, 131, 75;
+  --color-red-rgb: 235, 76, 76;
+  --color-green-rgb: 0, 182, 122;
+  --color-blue-rgb: 13, 110, 253;
+  --color-white-rgb: 255, 255, 255;
+  --color-black-rgb: 0,0,0;
+  --color-dark-rgb: 18, 18, 18;
+  --color-medium-rgb: 141, 141, 141;
+  --color-light-rgb: 242, 242, 242;
+  --border-color: #e8e8e8;
+  --border-color-2: #a7a7a7;
+  --text-dark: var(--color-dark);
+  --text-medium: var(--color-medium);
+  --text-white: var(--color-white);
+  --text-light: var(--color-light);
+  --btn-color: var(--text-white);
+  --btn-hover-color: var(--text-white);
+  --bg-1: #F3F3F3;
+  --bg-2: #F8F8F8;
+  --bg-3: #ebebeb;
+  --bg-white: var(--color-white);
+  --bg-dark: #0A0909;
+  --bg-dark-2: #161616;
+  --bg-primary-light: rgba(var(--color-primary-rgb), .06);
+  --gradient-1: linear-gradient(145deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --shadow-md: 0 5px 30px -5px rgba(8, 0, 42, .1);
+  --shadow-round: 0 15px 30px -15px rgba(8, 0, 42, .5);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+  --radius-xl: 20px;
+  --radius-pill: 50rem;
+  --radius-circle: 50%;
+}
+
+/* -----------------------------------------
+	Footer CSS
+----------------------------------------- */
+.footer-area {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.footer-area .footer-top {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.footer-area .footer-widget {
+  margin-bottom: 30px;
+}
+.footer-area .footer-widget ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.footer-area .footer-widget .title {
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+@media (max-width: 991.98px) {
+  .footer-area .footer-widget .title {
+    margin-bottom: 15px;
+  }
+}
+.footer-area .footer-widget p {
+  margin-bottom: 25px;
+}
+.footer-area .info-list li,
+.footer-area .footer-links li {
+  position: relative;
+  overflow: hidden;
+  font-size: var(--font-sm);
+}
+.footer-area .info-list li:not(:last-child),
+.footer-area .footer-links li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-area .info-list li a,
+.footer-area .footer-links li a {
+  display: block;
+}
+.footer-area .info-list li a{
+  display: inline-block;
+}
+.footer-area .info-list li a:hover,
+.footer-area .footer-links li a:hover {
+  color: var(--color-primary);
+}
+.footer-area .footer-links a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  transition: all 0.3s linear;
+}
+.footer-area .footer-links a:hover{
+  color: var(--color-primary);
+}
+.footer-area .copy-right-area {
+  border-top: 1px dashed rgba(var(--color-dark-rgb), 0.2);
+  text-align: center;
+}
+.footer-area.footer-area_v2 :is(p, span, .footer-links a, a) {
+  color: var(--text-light) !important;
+}
+.footer-area.footer-area_v2 .title {
+  color: var(--text-white);
+}
+.footer-area.footer-area_v2 .copy-right-area {
+  border-top-color: rgba(var(--color-white-rgb), 0.2);
+}

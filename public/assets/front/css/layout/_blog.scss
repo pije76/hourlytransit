@@ -1,0 +1,105 @@
+/* -----------------------------------------
+	Blog CSS
+----------------------------------------- */
+.blog-area {
+    position: relative;
+    overflow: hidden;
+
+    .card {
+        overflow: hidden;
+        transition: all .3s;
+
+        &_top{
+            position: relative;
+        }
+
+        &_img {
+            overflow: hidden;
+            border-radius: 0
+        }
+
+        img {
+            @include transition(transform, .3s, ease-out);
+        }
+
+        p {
+            margin-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        &_list {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+            font-size: var(--font-sm);
+			a {
+				color: var(--text-medium);
+			}
+			i {
+				color: var(--color-primary);
+			}
+
+            @media (min-width: 1200px) and (max-width: 1399.98px) {
+                gap: 15px;
+                font-size: var(--font-sm) !important;
+            }
+		}
+
+        .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: var(--font-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        &:hover {
+            img {
+                transform: scale3d(1.05, 1.05, 1.05);
+            }
+
+            .btn-text {
+                letter-spacing: .1em;
+            }
+        }
+    }
+}
+
+.blog-area_v1 {
+    .card {
+        margin-bottom: 22px;
+        background-color: transparent;
+        overflow: unset;
+        .btn {
+            border: 1px solid var(--border-color);
+            margin-bottom: -22px;
+            transition: all .2s;
+
+            &:hover{
+                background-color: var(--color-primary);
+                border-color: unset;
+                color: var(--text-white);
+            }
+        }
+    }
+}
+.blog-area_v3 {
+    .card {
+        &_top{
+            padding: 10px 10px 0;
+        }
+        &_list {
+            position: relative;
+            justify-content: space-between;
+            padding: 15px 20px;
+			background-color: var(--bg-white);
+            box-shadow: var(--shadow-md);
+            font-size: var(--font-base);
+            margin-top: -30px;
+            z-index: 1;
+		}
+    }
+}

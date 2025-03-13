@@ -1,0 +1,281 @@
+/* -----------------------------------------
+	Hero Banner CSS
+----------------------------------------- */
+.hero-banner {
+    position: relative;
+    z-index: 1;
+
+    .banner-content {
+        max-width: 700px;
+
+        .subtitle {
+            display: inline-block;
+        }
+
+        .text,
+        p {
+            font-size: var(--font-lg);
+            max-width: 540px;
+            margin-bottom: 0;
+        }
+    }
+
+    .banner-filter-form {
+        position: relative;
+        max-width: 840px;
+        z-index: 11;
+
+        .grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .item {
+                flex: 0 0 auto;
+                width: calc(30% - 10px);
+                padding-inline-start: 15px;
+                border-inline-start: 2px solid var(--border-color);
+
+                &:first-child,
+                &:last-child {
+                    padding: 0;
+                    border: unset;
+                }
+
+                &:last-child {
+                    width: calc(10% - 10px);
+                }
+            }
+        }
+
+        .form-wrapper {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        label {
+            color: var(--text-dark);
+            font-weight: var(--font-medium);
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .form-block {
+            position: relative;
+
+            .form-control,
+            select,
+            .niceselect {
+                padding-inline-start: 25px;
+            }
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                margin-inline-start: 0;
+                margin-inline-end: auto;
+                width: 25px;
+                font-size: 18px;
+            }
+        }
+
+        .niceselect,
+        .form-control {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            height: 100%;
+            line-height: normal;
+            color: var(--text-medium);
+            font-weight: var(--font-normal);
+            font-size: var(--font-sm);
+            background: transparent;
+
+            .list {
+                color: var(--text-medium);
+            }
+        }
+
+        .select2-container {
+            width: 100% !important;
+            .select2-selection--single {
+                .select2-selection__rendered {
+                    padding-inline-start: 25px;
+                }
+            }
+        }
+    }
+
+    .home-slider {
+        position: relative;
+        z-index: 2;
+    }
+
+    .home-img-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+/* -----------------------------------------
+	Hero Banner 1
+----------------------------------------- */
+.hero-banner.hero-banner_v1 {
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+    .form-wrapper {
+        background-color: var(--bg-white);
+        z-index: 3;
+    }
+
+    .btn-icon-text{
+        --size: 35px;
+        *{
+            color: var(--text-medium);
+        }
+        span:first-child{
+            width: var(--size);
+            height: var(--size);
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            i{
+                --size: auto;
+                background-color: unset;
+                font-size: 18px;
+                border-radius: unset;
+                color: var(--text-medium);
+                box-shadow: unset;
+            }
+        }
+    }
+}
+
+/* -----------------------------------------
+	Hero Banner 2
+----------------------------------------- */
+.hero-banner.hero-banner_v2 {
+    padding-top: 145px;
+    padding-bottom: 165px;
+
+    .banner-content {
+        margin-inline: auto;
+
+        .text,
+        p {
+            margin-inline: auto;
+        }
+    }
+
+    .form-wrapper{
+        border-radius: var(--radius-md);
+        .btn-icon{
+            border-radius: var(--radius-sm);
+        }
+        
+        @media #{$md-up} {
+            border-radius: var(--radius-pill);
+            .btn-icon{
+                border-radius: var(--radius-circle);
+            }
+        }
+    }
+
+    .home-img-slider {
+        .swiper-slide {
+            position: relative;
+            overflow: hidden;
+
+            .bg-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($color: var(--color-black-rgb), $alpha: .8);
+                z-index: 1;
+            }
+        }
+    }
+    .swiper-slide {
+        .bg-img {
+            transition: all 10s linear;
+        }
+
+        .banner-content {
+            opacity: 0;
+        }
+
+        &.swiper-slide-active {
+            .bg-img {
+                transform: scale(1.1);
+            }
+
+            .banner-content {
+                opacity: 1;
+            }
+        }
+    }
+
+    .swiper-pagination{
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        padding: 5px 15px;
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
+        background-color: var(--bg-white);
+    }
+}
+
+/* -----------------------------------------
+	Hero Banner 3
+----------------------------------------- */
+.hero-banner.hero-banner_v3 {
+    .hero-wrapper{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        padding-block: 100px 150px;
+
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: var(--color-primary-rgb), $alpha: .5);
+            background: linear-gradient(90deg, rgba(var(--color-primary-rgb), 0.95) 19.06%, rgba(var(--color-dark-rgb), 0.00) 72.26%);
+            z-index: -1;
+        }
+    }
+    .hero-bottom{
+        margin-top: -50px;
+    }
+    .form-wrapper {
+        z-index: 3;
+    }
+}
